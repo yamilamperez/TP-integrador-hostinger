@@ -26,8 +26,12 @@
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 16px;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* HEADER SECTION */
@@ -37,19 +41,15 @@ header {
     box-shadow: 0 4px 10px #0000001a;
 }
 
-
 .nav__content {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 88px;
     background-color: var(--paletacolor4);
 }
 
 .nav__menu {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px 20px 40px;
@@ -71,8 +71,8 @@ header {
 
 .nav__menu__left li {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .nav__menu__left li a {
@@ -97,17 +97,15 @@ header {
 
 .nav__menu__right {
     display: flex;
-    flex-direction: row;
     justify-content: end;
     gap: 32px;
 }
 
 .language {
     display: flex;
-    flex-direction: row;
-    gap: 4px;
     justify-content: center;
     align-items: center;
+    gap: 4px;
 }
 
 .language img {
@@ -136,36 +134,50 @@ header {
     font-weight: 700;
     line-height: 16px;
     border: 1.6px solid var(--paletacolor2);
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 12px 16px 12px 16px;
+    cursor: pointer;
+}
+
+.mobile__nav {
+    display: none;
+}
+
+.mobile__nav svg {
+    width: 24px;
+    height: 24px;
+    color: var(--paletacolor2);
+    cursor: pointer;
+}
+
+.h__logo {
+    padding: 29px 0px 29px 40px;
+    border: none;
+    background: transparent;
     cursor: pointer;
 }
 
 /* HERO SECTION */
 
 .hero__section {
-    padding-top: 36px;
-    padding-bottom: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 0px 96px 0px;
 }
 
 .hero__content {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 24.4px;
-    margin-right: 24.4px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .content__left {
+    width: 463px;
     display: flex;
     flex-direction: column;
     text-align: start;
-    gap: 8px;
-    flex: 1;
 }
 
 .question__svg {
@@ -185,7 +197,8 @@ header {
     font-weight: 700;
     color: var(--paletacolor1);
     line-height: 32px;
-    margin-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 24px;
 }
 
 .hero__subtitle span {
@@ -206,7 +219,7 @@ header {
     align-items: left;
     justify-content: flex-start;
     list-style: none;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .checklist__item {
@@ -252,6 +265,7 @@ header {
     justify-content: start;
     gap: 12px;
     height: 48px;
+    margin-bottom: 10px;
 }
 
 .cta__button {
@@ -284,14 +298,12 @@ header {
 
 .content__right {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    flex: 2;
 }
 
 .content__right img {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 880px;
     height: auto;
 }
 
@@ -322,13 +334,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 80px 0px;
 }
 
 .migration__header {
-    margin-left: 156.4px;
-    margin-right: 156.4px;
+    width: 1128px;
     margin-bottom: 48px;
     padding-left: 40px;
     padding-right: 40px;
@@ -351,12 +361,10 @@ header {
     font-weight: 400;
 }
 
-.card__container {
+.cards__container {
+    width: 1128px;
     display: flex;
-    flex-direction: row;
     gap: 24px;
-    margin-left: 156.4px;
-    margin-right: 156.4px;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -364,11 +372,11 @@ header {
 .card {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    gap: 16px;
     background-color: #2f1c6a;
     border-radius: 16px;
     padding: 32px;
+    flex: 1;
+    gap: 16px;
 }
 
 .card__container__icon {
@@ -402,12 +410,11 @@ header {
     line-height: 24px;
 }
 
-.container__buttons {
+.buttons__container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 48px;
-    width: 1270px;
     height: 48px;
 }
 
@@ -436,8 +443,6 @@ footer {
 .footer__content {
     font-size: var(--size14);
     color: var(--paletacolor1);
-    margin-left: 156.4px;
-    margin-right: 156.4px;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 24px;
@@ -520,4 +525,76 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Cambio de tamaño de hero img */
+@media screen and (max-width: 1364px) {
+.content__right img {
+    width: 616px;
+    height: auto;
+}
+}
+
+/* Cambio de nav por menú desplegable*/
+@media screen and (max-width: 1139px) {
+.nav__content {
+    display: none;
+}
+
+.mobile__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    width: 100%;
+    background-color: var(--paletacolor4);
+    position: sticky;
+    top: 0;
+}
+
+}
+
+/* Cambio en contenedores flex de row a column */
+
+@media screen and (max-width: 1024px) {
+    .hero__content {
+        flex-direction: column;
+    }
+
+    .content__left {
+    width: 688px;
+    }
+
+    .content__left h1 {
+        font-size: 28px;
+    }
+
+    .cards__container {
+        width: 688px;
+        flex-direction: column;
+        column-gap: 8px;
+    }
+
+    .migration__header {
+    width: 668px; 
+    }
+
+}
+
+/* Cambio en tamaño contenedores flex y botones */
+
+@media screen and (max-width: 768px) {
+
+    .hero__section {
+    padding: 14px 0px 36px;
+    }
+
+    .content__left {
+    width: 508px;
+    }
+
+    .content__right img {
+        width: 508px;
+        height: auto;
+    }
 }
