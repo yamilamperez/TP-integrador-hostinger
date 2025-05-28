@@ -338,7 +338,6 @@ header {
 }
 
 .migration__header {
-    width: 1128px;
     margin-bottom: 48px;
     padding-left: 40px;
     padding-right: 40px;
@@ -364,7 +363,6 @@ header {
 }
 
 .cards__container {
-    width: 1128px;
     display: flex;
     gap: 24px;
     padding-left: 40px;
@@ -448,7 +446,8 @@ footer {
 .footer__content {
     max-width: 1208px;
     padding: 0px 40px 0px 40px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer__top {
@@ -475,7 +474,6 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
-
 }
 
 .footer__top__paymentmethods span {
@@ -500,7 +498,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     flex-basis: 52%;
-    gap: 15px;
+    gap: 8px;
 }
 
 .footer__legal a {
@@ -544,6 +542,18 @@ footer {
 
 }
 
+@media screen and (max-width: 1189px) {
+
+    .footer__top__social {
+        flex-basis: 84%;
+    }
+
+    .footer__legal {
+        flex-basis: 49%;
+    }
+
+}
+
 @media screen and (max-width: 1140px) {
     header {
         box-shadow: none;
@@ -579,6 +589,30 @@ footer {
     margin-left: 0;
     margin-right: 0;
 }
+
+.footer__top__social {
+    flex-basis: 82%;
+}
+
+.footer__legal {
+    flex-basis: 45%;
+}
+
+}
+
+@media screen and (max-width: 1049px) {
+
+    .footer__top__social {
+        flex-basis: 82%;
+    }
+
+    .footer__top__paymentmethods {
+        flex-basis: 15%;
+    }
+
+    .footer__legal {
+        flex-basis: 45%;
+    }
 
 }
 
@@ -621,6 +655,15 @@ footer {
         column-gap: 8px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .footer__top__social {
+        flex-basis: 75%;
+    }
+
+    .footer__legal {
+    flex-basis: 100%;
+    justify-content: start;
     }
 
 }
@@ -697,6 +740,27 @@ footer {
         margin: auto;
     }
 
+    .footer__content {
+    max-width: 508px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .footer__top {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+    .footer__legal {
+gap: 16px;
+}
+
+    .footer__top__paymentmethods {
+    flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -730,6 +794,18 @@ footer {
         padding-left: 16px;
         padding-right: 16px;
         margin: 0;
+    }
+
+    .footer__top__paymentmethods {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    }
+
+    .footer__legal {
+        flex-wrap: wrap;
+    gap: 16px;
     }
 
 }
